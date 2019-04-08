@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="refresh" content="180; url=../ECOFriend/Results.html"/>
+    <title>Bedroom</title>
+    <script src="./Timer.js"></script>
+    <style>
+        body,
+        div,
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* div {
+            border: 1px solid lawngreen;
+        } */
+
+        .bedroom-senorio {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 1080px;
+            margin: 0 auto;
+        }
+
+        .background-img {
+
+            width: 1080px;
+            height: 800px;
+        }
+
+        .items {
+            float: left;
+            position: relative;
+        }
+
+        .light {
+            width: 106px;
+            height: 115px;
+            top: -804px;
+            left: 530px;
+        }
+
+        .tablelight {
+            width: 158px;
+            height: 247px;
+            top: -490px;
+            left: 420px;
+        }
+
+        .laptop {
+            width: 126px;
+            height: 120px;
+            top: -180px;
+            left: 300px;
+        }
+
+        .phone {
+            width: 204px;
+            height: 105px;
+            top: -255px;
+            left: 310px;
+        }
+
+        .ac {
+            width: 398px;
+            height: 250px;
+            top: -790px;
+            left: 75px;
+        }
+
+        .heater {
+            width: 172px;
+            height: 302px;
+            top: -603px;
+            left: 50px;
+        }
+
+        .backbutton {
+            float: left;
+            position: relative;
+            top: -350px;
+            left: 750px;
+            width: 130px;
+        }
+
+        .back-button {
+            width: 130px;
+
+        }
+
+        .bird {
+            float: left;
+            position: relative;
+            top: -1000px;
+            width: 56px;
+            height: 51px;
+        }
+
+        .cloud1 {
+            width: 78px;
+            height: 43px;
+            float: left;
+            position: relative;
+            top: -1000px;
+            left: -300px;
+        }
+
+        .cloud2 {
+            width: 80px;
+            height: 40px;
+            float: left;
+            position: relative;
+            top: -1000px;
+            left: -225px;
+        }
+
+        .tree {
+            width: 126px;
+            height: 164px;
+            float: left;
+            position: relative;
+            top: -895px;
+            left: -520px;
+        }
+
+        .leave {
+            width: 107px;
+            height: 120px;
+            float: left;
+            position: relative;
+            top: -960px;
+            left: -650px;
+        }
+
+        .mountain {
+            width: 353px;
+            height: 192px;
+            float: left;
+            position: relative;
+            top: -955px;
+            left: -472px;
+        }
+
+        #mountainimg {
+            width: 200px;
+        }
+
+        #showtime {
+            float: left;
+            position: relative;
+            /* border: 1px solid greenyellow; */
+            top: -440px;
+            left: -750px;
+            width: 80px;
+            height: 50px;
+            font-size: 40px;
+            color: red;
+            font-family: "Comic Sans MS";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bedroom-senorio">
+
+        <img src="../../FIT5120/PSFile/bedroom/bedroom/background.jpg" alt="Can not find the image source."
+            class="background-img">
+        <!-- <div class="light-on">
+            <img id="light-on" src="../../FIT5120/PSFile/bedroom/bedroom/light-on.png"
+                alt="Can not find the image source">
+        </div>
+        <div class="light-close">
+            <img src="../../FIT5120/PSFile/bedroom/bedroom/light - close.png" alt="Can not find the image source."
+                id="light-close">
+        </div> -->
+
+        <div class="items light">
+            <img id="lamp" onClick="changelamp()" src="../../FIT5120/PSFile/bedroom/bedroom/light-on.png"
+                alt="Can not find the image source.">
+        </div>
+
+        <div class="items tablelight">
+            <img id="table-light" onClick="changetablelight()"
+                src="../../FIT5120/PSFile/bedroom/bedroom/tablelight-on.png" alt="Can not find the image source.">
+        </div>
+
+        <div class="items laptop">
+            <img id="laptop" onClick="changelaptop()" src="../../FIT5120/PSFile/bedroom/bedroom/laptop-on.png"
+                alt="Can not find the image source.">
+        </div>
+
+        <div class="items phone">
+            <img id="phone" onClick="changephone()" src="../../FIT5120/PSFile/bedroom/bedroom/phone-open.png"
+                alt="Can not find the image source.">
+        </div>
+
+        <div class="items ac">
+            <img id="ac" onClick="changeac()" src="../../FIT5120/PSFile/bedroom/bedroom/airconditionor-OPEN.png"
+                alt="Can not find the image source.">
+        </div>
+
+        <div class="items heater">
+            <img id="heater" onClick="changeheater()" src="../../FIT5120/PSFile/bedroom/bedroom/heater-on.png"
+                alt="Can not find the image source.">
+        </div>
+
+        <div class="backbutton">
+            <a href="../ECOFriend/ChooseRooms.html"><img src="../../FIT5120/PSFile/bedroom/bedroom/back.png"
+                    alt="Can not find the image source." class="back-button"></a>
+        </div>
+
+        <div class="bird">
+            <img src="../../FIT5120/PSFile/bedroom/bedroom/bird.png" alt="Can not find the image source." id="birdimg">
+        </div>
+
+        <div class="cloud1">
+            <img src="../../FIT5120/PSFile/bedroom/bedroom/clouod1.png" alt="Can not find the image source."
+                id="cloudimg1">
+        </div>
+
+        <div class="cloud2">
+            <img src="../../FIT5120/PSFile/bedroom/bedroom/cloud2.png" alt="Can not find the image source."
+                id="cloudimg2">
+        </div>
+
+        <div class="tree">
+            <img src="../../FIT5120/PSFile/bedroom/bedroom/tree.png" alt="Can not find the image source." id="treeimg">
+        </div>
+
+        <div class="leave">
+            <img src="../../FIT5120/PSFile/bedroom/bedroom/leave.png" alt="Can not find the image source."
+                id="leaveimg">
+        </div>
+
+        <div class="mountain">
+            <img src="../../FIT5120/PSFile/bedroom/bedroom/mountain.png" alt="Can not find the image source."
+                id="mountainimg">
+        </div>
+        <div id="showtime">
+            
+        </div>
+
+        
+
+    </div>
+
+    <script>
+
+        // setTimeout (window.location.href='../ECOFriend/ChooseRooms.html', 5000);
+        resetTime("showtime", 180);
+        // console.log(m + ':' + s);
+
+        var a = 0, b=0, c=0, d=0, e=0, f=0;
+
+
+        var bird = document.getElementById("birdimg");
+        bird.style.display = "none";
+        var cloud1 = document.getElementById("cloudimg1")
+        cloud1.style.display = "none";
+        var cloud2 = document.getElementById("cloudimg2")
+        cloud2.style.display = "none";
+        var tree = document.getElementById("treeimg")
+        tree.style.display = "none";
+        var leave = document.getElementById("leaveimg")
+        leave.style.display = "none";
+        var mountain = document.getElementById("mountainimg")
+        mountain.style.display = "none";
+
+        function changelamp() {
+            var element = document.getElementById("lamp");
+            if (element.src.match("light-on.png")) {
+                element.src = "../../FIT5120/PSFile/bedroom/bedroom/light - close.png";
+                bird.style.display = "block";
+                a =1;
+            }
+            else {
+                element.src = "../../FIT5120/PSFile/bedroom/bedroom/light-on.png";
+                bird.style.display = "none";
+                a=0;
+            }
+        }
+
+        function changetablelight() {
+            var element = document.getElementById("table-light");
+            if (element.src.match("tablelight-on.png")) {
+                element.src = "../../FIT5120/PSFile/bedroom/bedroom/tablelight-close.png";
+                cloud1.style.display = "block";
+                b=1;
+            }
+            else {
+                element.src = "../../FIT5120/PSFile/bedroom/bedroom/tablelight-on.png";
+                cloud1.style.display = "none";
+                b=0;
+            }
+        }
+
+        function changelaptop() {
+            var element = document.getElementById("laptop");
+            if (element.src.match("laptop-on.png")) {
+                element.src = "../../FIT5120/PSFile/bedroom/bedroom/laptop-close.png";
+                cloud2.style.display = "block";
+                c=1;
+            }
+            else {
+                element.src = "../../FIT5120/PSFile/bedroom/bedroom/laptop-on.png";
+                cloud2.style.display = "none";
+                c=0;
+            }
+        }
+
+        function changephone() {
+            var element = document.getElementById("phone");
+            if (element.src.match("phone-open.png")) {
+                element.src = "../../FIT5120/PSFile/bedroom/bedroom/phone-close.png";
+                tree.style.display = "block";
+                d=1;
+            }
+            else {
+                element.src = "../../FIT5120/PSFile/bedroom/bedroom/phone-open.png";
+                tree.style.display = "none";
+                d=0;
+            }
+        }
+
+        function changeac() {
+            var element = document.getElementById("ac");
+            if (element.src.match("airconditionor-OPEN.png")) {
+                element.src = "../../FIT5120/PSFile/bedroom/bedroom/airconditionor-close.png";
+                leave.style.display = "block";
+                e=1;
+            }
+            else {
+                element.src = "../../FIT5120/PSFile/bedroom/bedroom/airconditionor-OPEN.png";
+                leave.style.display = "none";
+                e=0;
+            }
+        }
+
+        function changeheater() {
+            var element = document.getElementById("heater");
+            if (element.src.match("heater-on.png")) {
+                element.src = "../../FIT5120/PSFile/bedroom/bedroom/heater-close.png";
+                mountain.style.display = "block";
+                f=1;
+            }
+            else {
+                element.src = "../../FIT5120/PSFile/bedroom/bedroom/heater-on.png";
+                mountain.style.display = "none";
+                f=0;
+            }
+
+            if (a&&b&&c&&d&&e&&f==1)
+            {
+                window.location.href='../ECOFriend/ChooseRooms.html';
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

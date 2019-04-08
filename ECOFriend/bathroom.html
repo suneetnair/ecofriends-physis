@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="180; url=../ECOFriend/Results.html" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bathroom</title>
+    <script src="./Timer.js"></script>
+    <style>
+        body,
+        div,
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* div {
+            border: 1px solid lawngreen;
+        } */
+
+        .bathroom-senorio {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 1080px;
+            margin: 0 auto;
+        }
+
+        .bg-img {
+
+            width: 1080px;
+            height: 800px;
+        }
+
+        .item {
+            float: left;
+            position: relative;
+        }
+
+        .washing {
+            width: 298px;
+            height: 260px;
+            left: 550px;
+            top: -347px;
+        }
+
+        .bathtub {
+            width: 457px;
+            height: 310px;
+            top: -445px;
+            left: -280px;
+        }
+
+        .dryer1 {
+            width: 86px;
+            height: 98px;
+            top: -540px;
+            left: -120px;
+        }
+
+        .dryer2 {
+            width: 134px;
+            height: 94px;
+            top: -539px;
+            left: -305px;
+        }
+
+        .faucet {
+            width: 306px;
+            height: 502px;
+            top: -720px;
+        }
+
+        .light {
+            width: 262px;
+            height: 181px;
+            top: -1407px;
+            left: 500px;
+        }
+
+        .cloud1 {
+            width: 64px;
+            height: 40px;
+            top: -1350px;
+            left: -400px;
+        }
+
+        .cloud2 {
+            width: 68px;
+            height: 42px;
+            top: -1350px;
+            left: -370px;
+        }
+
+        .sky {
+            width: 226px;
+            height: 142px;
+            top: -1300px;
+            left: -530px;
+        }
+
+        .sun {
+            width: 106px;
+            height: 122px;
+            top: -1365px;
+            left: -550px;
+        }
+
+        .tree1 {
+            width: 126px;
+            height: 146px;
+            top: -1302px;
+            left: -860px;
+        }
+
+        .tree2 {
+            width: 128px;
+            height: 146px;
+            top: -1449px;
+            left: -90px;
+        }
+
+        .backbutton {
+            /* border: 1px solid greenyellow; */
+            width: 140px;
+            height: 90px;
+            top: -700px;
+            left: 590px;
+        }
+        .back-button {
+            width: 140px;
+            height: 90px;
+        }
+
+        #showtime {
+            float: left;
+            position: relative;
+            /* border: 3px solid red; */
+            top: -850px;
+            left: -70px;
+            width: 110px;
+            height: 55px;
+            font-size: 40px;
+            color: red;
+            font-family: "Comic Sans MS";
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bathroom-senorio">
+        <img src="../../FIT5120/PSFile/bathroom/background.jpg" alt="Can not find the image source." class="bg-img">
+        <div class="item washing"><img id="washingmachine" onClick="changewashing()"
+                src="../../FIT5120/PSFile/bathroom/bathroom/washing-on.png"></div>
+        <div class="item bathtub"><img id="bathtub" onClick="changebathtub()"
+                src="../../FIT5120/PSFile/bathroom/bathroom/bathtub-on.png"></div>
+        <div class="item dryer1"><img id="dryerno1" onClick="changedryer1()"
+                src="../../FIT5120/PSFile/bathroom/bathroom/dryer1-on.png"></div>
+        <div class="item dryer2"><img id="dryerno2" onClick="changedryer2()"
+                src="../../FIT5120/PSFile/bathroom/bathroom/dryer2-on.png"></div>
+        <div class="item faucet"><img id="faucet" onClick="changefaucet()"
+                src="../../FIT5120/PSFile/bathroom/bathroom/faucet-on.png"></div>
+        <div class="item light"><img id="light" onClick="changelight()"
+                src="../../FIT5120/PSFile/bathroom/bathroom/light-on.png"></div>
+        <div class="item backbutton">
+            <a href="../ECOFriend/ChooseRooms.html"><img src="../../FIT5120/PSFile/bedroom/bedroom/back.png"
+                    alt="Can not find the image source." class="back-button"></a>
+        </div>
+
+        <div class="item cloud1">
+            <img src="../../FIT5120/PSFile/bathroom/bathroom/cloud1.png" alt="Can not find the image source."
+                id="cloud1img">
+        </div>
+
+        <div class="item cloud2">
+            <img src="../../FIT5120/PSFile/bathroom/bathroom/cloud2.png" alt="Can not find the image source."
+                id="cloud2img">
+        </div>
+
+        <div class="item sky">
+            <img src="../../FIT5120/PSFile/bathroom/bathroom/sky.png" alt="Can not find the image source." id="skyimg">
+        </div>
+
+        <div class="item sun">
+            <img src="../../FIT5120/PSFile/bathroom/bathroom/sun.png" alt="Can not find the image source." id="sunimg">
+        </div>
+
+        <div class="item tree1">
+            <img src="../../FIT5120/PSFile/bathroom/bathroom/tree1.png" alt="Can not find the image source."
+                id="tree1img">
+        </div>
+
+        <div class="item tree2">
+            <img src="../../FIT5120/PSFile/bathroom/bathroom/tree2.png" alt="Can not find the image source."
+                id="tree2img">
+        </div>
+
+        <div id="showtime">
+
+        </div>
+
+        <script>
+
+            resetTime("showtime", 180);
+
+
+
+
+            var cloud1 = document.getElementById("cloud1img");
+            cloud1.style.display = "none";
+            var cloud2 = document.getElementById("cloud2img")
+            cloud2.style.display = "none";
+            var sky = document.getElementById("skyimg")
+            sky.style.display = "none";
+            var sun = document.getElementById("sunimg")
+            sun.style.display = "none";
+            var tree1 = document.getElementById("tree1img")
+            tree1.style.display = "none";
+            var tree2 = document.getElementById("tree2img")
+            tree2.style.display = "none";
+
+
+
+
+
+
+
+
+            function changewashing() {
+                var element = document.getElementById("washingmachine");
+                if (element.src.match("washing-on.png")) {
+                    element.src = "../../FIT5120/PSFile/bathroom/bathroom/washing-off.png";
+                    cloud1.style.display = "block";
+                }
+                else {
+                    element.src = "../../FIT5120/PSFile/bathroom/bathroom/washing-on.png";
+                    cloud1.style.display = "none";
+                }
+            }
+
+            function changebathtub() {
+                var element = document.getElementById("bathtub");
+                if (element.src.match("bathtub-on.png")) {
+                    element.src = "../../FIT5120/PSFile/bathroom/bathroom/bathtub-off.png";
+                    cloud2.style.display = "block";
+                }
+                else {
+                    element.src = "../../FIT5120/PSFile/bathroom/bathroom/bathtub-on.png";
+                    cloud2.style.display = "none";
+                }
+            }
+
+            function changedryer1() {
+                var element = document.getElementById("dryerno1");
+                if (element.src.match("dryer1-on.png")) {
+                    element.src = "../../FIT5120/PSFile/bathroom/bathroom/dryer1-off.png";
+                    sky.style.display = "block";
+                }
+                else {
+                    element.src = "../../FIT5120/PSFile/bathroom/bathroom/dryer1-on.png";
+                    sky.style.display = "none";
+                }
+            }
+
+            function changedryer2() {
+                var element = document.getElementById("dryerno2");
+                if (element.src.match("dryer2-on.png")) {
+                    element.src = "../../FIT5120/PSFile/bathroom/bathroom/dryer2-off.png";
+                    sun.style.display = "block";
+                }
+                else {
+                    element.src = "../../FIT5120/PSFile/bathroom/bathroom/dryer2-on.png";
+                    sun.style.display = "none";
+                }
+            }
+
+            function changefaucet() {
+                var element = document.getElementById("faucet");
+                if (element.src.match("faucet-on.png")) {
+                    element.src = "../../FIT5120/PSFile/bathroom/bathroom/faucet-off.png";
+                    tree1.style.display = "block";
+                }
+                else {
+                    element.src = "../../FIT5120/PSFile/bathroom/bathroom/faucet-on.png";
+                    tree1.style.display = "none";
+                }
+            }
+
+            function changelight() {
+                var element = document.getElementById("light");
+                if (element.src.match("light-on.png")) {
+                    element.src = "../../FIT5120/PSFile/bathroom/bathroom/light-off.png";
+                    tree2.style.display = "block";
+                }
+                else {
+                    element.src = "../../FIT5120/PSFile/bathroom/bathroom/light-on.png";
+                    tree2.style.display = "none";
+                }
+            }
+
+        </script>
+</body>
+
+</html>
